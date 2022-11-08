@@ -11,7 +11,7 @@ public class SwiftFlutterScreenWakePlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     switch call.method {
         case "brightness":
-            result(UIScreen.main.brightness as? Double));
+            result(UIScreen.main.brightness)
         case "setBrightness":
             if let args = call.arguments as? Dictionary<String, Any>,
                let brightness = args["brightness"] as? Double {
